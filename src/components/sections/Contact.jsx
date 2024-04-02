@@ -51,7 +51,6 @@ const Desc = styled.div`
     font-size: 16px;
   }
 `;
-
 const ContactForm = styled.form`
   width: 95%;
   max-width: 600px;
@@ -65,14 +64,12 @@ const ContactForm = styled.form`
   margin-top: 28px;
   gap: 12px;
 `;
-
 const ContactTitle = styled.div`
   font-size: 28px;
   margin-bottom: 6px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
 `;
-
 const ContactInput = styled.input`
   flex: 1;
   background-color: transparent;
@@ -86,7 +83,6 @@ const ContactInput = styled.input`
     border: 1px solid ${({ theme }) => theme.primary};
   }
 `;
-
 const ContactInputMessage = styled.textarea`
   flex: 1;
   background-color: transparent;
@@ -100,7 +96,6 @@ const ContactInputMessage = styled.textarea`
     border: 1px solid ${({ theme }) => theme.primary};
   }
 `;
-
 const ContactButton = styled.input`
   width: 100%;
   text-decoration: none;
@@ -135,17 +130,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_vlyl88c",
-        "template_yb05638",
-        form.current,
-        "YOUR_USER_ID_HERE"
-      )
+    emailjs.sendForm("service_vlyl88c", "template_yb05638", form.current, 'DgK3w7FY9IK59TwFq')
       .then(
         (result) => {
           alert("Message Sent");
-          form.current.reset();
+          form.current.resut();
         },
         (error) => {
           alert(error);
@@ -161,16 +150,12 @@ const Contact = () => {
         <Desc>
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
-        <ContactForm ref={form} onSubmit={handleSubmit}>
+        <ContactForm onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />
           <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage
-            placeholder="Message"
-            name="message"
-            rows={4}
-          />
+          <ContactInputMessage placeholder="Message" name="message" rows={4} />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
       </Wrapper>
