@@ -10,7 +10,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/prajwalsoni",
   resume:
-    "https://drive.google.com/file/d/19gJrUmPFmvcv1SGFZ7aEKAvPhuOvAHXo/view?usp=sharing",
+    "https://drive.google.com/file/d/1R1BvoLdmmHJXWMPpvSU6CNqwzpnm8MCY/view?usp=sharing",
   twitter: " https://x.com/PrajwalSoni10?t=F4PaUHgoqEAZwyOydIXeHQ&s=08",
   insta: "https://www.instagram.com/prajwal_soni__/",
   facebook: "https://www.facebook.com/prajwal.soni.944",
