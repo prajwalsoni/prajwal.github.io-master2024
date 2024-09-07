@@ -382,7 +382,7 @@ export const education = [
     school: "Abdul Kalam Technical University",
     date: "2022 - 2024",
     grade: " 7.5 CGPA",
-    desc: "I am pursuing masters degree from Abdul Kalam Technical University",
+    desc: "I have pursued masters degree from Abdul Kalam Technical University",
     degree: "MCA 2Y",
   },
    {
