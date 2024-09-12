@@ -99,22 +99,7 @@ const ContactButton = styled.input`
   width: 100%;
   text-decoration: none;
   text-align: center;
-  background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
+  background: #29AB87;  // Updated color
   padding: 13px 16px;
   margin-top: 2px;
   border-radius: 12px;
@@ -123,6 +108,7 @@ const ContactButton = styled.input`
   font-size: 18px;
   font-weight: 600;
 `;
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
