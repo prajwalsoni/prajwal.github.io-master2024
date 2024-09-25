@@ -14,6 +14,7 @@ export const Bio = {
   twitter: " https://x.com/PrajwalSoni10?t=F4PaUHgoqEAZwyOydIXeHQ&s=08",
   insta: "https://www.instagram.com/prajwal_soni__/",
   facebook: "https://www.facebook.com/prajwal.soni.944",
+  linkedin:"https://www.linkedin.com/in/prajwal-soni-a67671259/"
 };
 export const skills = [
   {
