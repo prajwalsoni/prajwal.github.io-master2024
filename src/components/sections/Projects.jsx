@@ -4,15 +4,16 @@ import { projects } from "../../data/constants";
 import ProjectCard from "../cards/ProjectCard";
 
 const Container = styled.div`
-margin-top: 100px;
-display: flex;
-flex-direction: column;
-justify-content-center;
-position: relative;
-z-index: 1;
-padding: 0 16px;
-align-items: center;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 16px;
+  align-items: center;
 `;
+
 const Wrapper = styled.div`
   position: relative;
   display: flex;
@@ -50,16 +51,16 @@ const Desc = styled.div`
 `;
 
 const ToggleButtonGroup = styled.div`
-display: flex;
-border: 1.5px solid ${({ theme }) => theme.primary};
-color: ${({ theme }) => theme.primary};
-font-size: 16px;
-border-radius: 12px;
-font-weight 500;
-margin: 22px 0;
-@media (max-width: 768px){
+  display: flex;
+  border: 1.5px solid ${({ theme }) => theme.primary}; /* Border retained */
+  color: ${({ theme }) => theme.primary};
+  font-size: 16px;
+  border-radius: 12px;
+  font-weight: 500; /* Corrected the property */
+  margin: 22px 0;
+  @media (max-width: 768px) {
     font-size: 12px;
-}
+  }
 `;
 
 const ToggleButton = styled.div`
@@ -119,27 +120,22 @@ const Projects = ({ openModal, setOpenModal }) => {
             active={toggle === "web app"}
             onClick={() => setToggle("web app")}
           >
-            WEB APP"S
+            WEB APPS
           </ToggleButton>
           <Divider />
           <ToggleButton
             active={toggle === "android app"}
             onClick={() => setToggle("android app")}
           >
-            ANDROID APP'S
+            ANDROID APPS
           </ToggleButton>
-          <Divider />
-          <ToggleButton
-            active={toggle === "machine learning"}
-            onClick={() => setToggle("machine learning")}
-          >
-            MACHINE LEARNING
-          </ToggleButton>
+          {/* Machine Learning button removed */}
         </ToggleButtonGroup>
         <CardContainer>
           {toggle === "all" &&
             projects.map((project) => (
               <ProjectCard
+                key={project.id} // Add a key prop for unique identification
                 project={project}
                 openModal={openModal}
                 setOpenModal={setOpenModal}
@@ -149,6 +145,7 @@ const Projects = ({ openModal, setOpenModal }) => {
             .filter((item) => item.category === toggle)
             .map((project) => (
               <ProjectCard
+                key={project.id} // Add a key prop for unique identification
                 project={project}
                 openModal={openModal}
                 setOpenModal={setOpenModal}
